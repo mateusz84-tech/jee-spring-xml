@@ -4,17 +4,12 @@ public class HelloWorld {
 
     private String message;
 
-//    public HelloWorld(){
-//        this.messaage = messaage;
-//
-//    }
-
-
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
+    public HelloWorld(String message) {
         this.message = message;
     }
+
+    public void printMessage(){
+        System.out.println(this.message);
+    }
+
 }
