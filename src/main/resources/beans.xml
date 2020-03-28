@@ -10,5 +10,6 @@
         <!-- modyfikacja - wstrzyknięcie wartosci atrybutu przez metodę dostępową setter -->
          <property name="message" value="Witaj Spring - by setter"/>
      </bean>
+    <bean name="emailService" class="pl.coderslab.beans.EmailService"/>
 
  </beans>

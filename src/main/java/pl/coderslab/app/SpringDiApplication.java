@@ -1,6 +1,7 @@
 package pl.coderslab.app;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import pl.coderslab.beans.EmailService;
 import pl.coderslab.beans.HelloWorld;
 
 public class SpringDiApplication {
@@ -13,6 +14,10 @@ public class SpringDiApplication {
         HelloWorld helloWorld = (HelloWorld) context.getBean("helloWorld");
         helloWorld.printMessage();
 
+        // pobranie ziarna klasy EmailService implementującej interface MessageService
+
+        EmailService emailService = (EmailService) context.getBean("emailService");
+        emailService.send();
         context.close();// ważne aby zamknąć konteks
     }
 }
