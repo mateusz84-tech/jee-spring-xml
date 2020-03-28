@@ -3,6 +3,7 @@ package pl.coderslab.app;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import pl.coderslab.beans.EmailService;
 import pl.coderslab.beans.HelloWorld;
+import pl.coderslab.beans.MessageSender;
 
 public class SpringDiApplication {
     public static void main(String[] args) {
@@ -18,6 +19,11 @@ public class SpringDiApplication {
 
         EmailService emailService = (EmailService) context.getBean("emailService");
         emailService.send();
+
+        // pobranie ziarna MessageSender
+
+        MessageSender messageSender = context.getBean("messageSender",MessageSender.class);
+        messageSender.sendMessage();
         context.close();// ważne aby zamknąć konteks
     }
 }

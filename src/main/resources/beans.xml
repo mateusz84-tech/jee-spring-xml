@@ -11,5 +11,9 @@
          <property name="message" value="Witaj Spring - by setter"/>
      </bean>
     <bean name="emailService" class="pl.coderslab.beans.EmailService"/>
+    <!-- dodanie ziarna klasy MessageSender-->
+    <bean id="messageSender" class="pl.coderslab.beans.MessageSender">
+        <constructor-arg ref="emailService"/>
+    </bean>
 
  </beans>
